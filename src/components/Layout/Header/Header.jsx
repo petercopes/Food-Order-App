@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Header.module.css'
-import Button from '../../UI/Button/Button';
 import mealsImg from '../../../assets/meals.jpeg'
 import HeaderCartButton from './HeaderCartButton';
 const Header = props =>{
@@ -10,10 +9,10 @@ const Header = props =>{
                 className={styles.header}
             >
                 <h1>React Meals</h1>
-                <HeaderCartButton/>
+                <HeaderCartButton onClick={props.onShowCart} />
             </header>
             <div className={styles['main-image']}>
-                <img src={mealsImg}/>
+                <img src={mealsImg} alt='a delicious plate of food'/>
             </div>
         </React.Fragment>
         

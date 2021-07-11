@@ -7,7 +7,8 @@ const MenuList = props => {
     const menuItems = DUMMY_MEALS.map(element=>
         <MenuItem
             key ={element.id} 
-            title={element.productName}
+            id={element.id}
+            title={element.name}
             productDescription={element.description}
             price={element.price}
             /* onAddCart={} */

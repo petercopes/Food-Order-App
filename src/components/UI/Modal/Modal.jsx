@@ -1,12 +1,10 @@
 import React, {Fragment} from 'react'
 import ReactDom from 'react-dom';
 import styles from './Modal.module.css';
-import Card from '../Card/Card'
-import Button from '../Button/Button'
 
 const Backdrop = props =>{
     return(
-        <div className={styles.backdrop} onClick ={props.onConfirm}/>
+        <div className={styles.backdrop} onClick ={props.onClick}/>
     )
 }
 const ModalOverlay = props =>{
@@ -21,7 +19,7 @@ const Modal = props =>{
 
     return(
         <Fragment>
-            {ReactDom.createPortal(<Backdrop onConfirm={props.onConfirm} />, document.getElementById('backdropRoot')) }
+            {ReactDom.createPortal(<Backdrop onClick={props.onClick} />, document.getElementById('backdropRoot')) }
             {ReactDom.createPortal( <ModalOverlay>{props.children}</ModalOverlay>, document.getElementById('overlayRoot')) }
             
            
