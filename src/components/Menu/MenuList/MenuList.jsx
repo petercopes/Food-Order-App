@@ -14,9 +14,12 @@ const MenuList = props => {
             /* onAddCart={} */
         />)
     return(
-        <Card className={styles.menuList}>
-            {menuItems}
-        </Card>
+        <section className={styles.meals}>
+            <Card >
+                <ul>{menuItems}</ul>                
+            </Card>
+        </section>
+        
     )
 }
 
