@@ -9,11 +9,7 @@ import CartProvider from './store/CartProvider';
 
 function App() {
   const cart = [{
-    id:'c1',
-    name:'sushi',
-    amount:2,
-    price:12.99
-}]
+    }]
   const [cartVisible,setCartVisible] = useState(false);
   const showCartHandler = ()=>{
     setCartVisible(true);
